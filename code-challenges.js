@@ -47,6 +47,14 @@ console.log(compareStrings(fruit3, fruit4));
 // --------------------1) Create a function that takes in a number and determines if the given number is below boiling point, at boiling point, or above boiling point. Boiling point is 212 degrees Fahrenheit. Use the test variables provided below.
 
 // Pseudo code:
+// The boiling point function takes in a tempertaure
+// Create a function called boilingTemp. 
+// This function will take the input number called thermalReading.
+// If the thermalReading is less that 212 degrees Fahrenheight, the return will be "is below boiling point"
+// If the thermalReading is at exactly 212 degrees Fahrenheight, the return will be "is at boiling point"
+// If the thermalReading is more than 212 degrees Fahrenheight, the return will be "is above boiling point
+// anything ELSE use as a catch all error.
+
 function checkBoilingPoint(temp) {
     if (temp < 212) {
         return "below boiling point";
@@ -73,6 +81,10 @@ console.log(checkBoilingPoint(temp3));
 
 // Pseudo code:
 
+// First I used the concat method to combine the two arrays
+// padres1984WorldSeriesRuns and padres1998WorldSeriesRuns into a singles array combinedRun
+// with the concat method a new array would include all the elements of the original arrays.
+
 const padres1984WorldSeriesRuns = [2, 5, 2, 2, 4];
 const padres1998WorldSeriesRuns = [6, 3, 5, 3];
  
@@ -86,6 +98,15 @@ console.log(combinedLength);
 // --------------------3) Create the code that will reverse the letters of a string using the test variable provided below.
 
 // Pseudo code:
+// The split method was used to convert the `currentCohort` string in an array of individual characters.
+// The empty string passed as an argument to `split` is a seperator that specifies whre to split that string but in this case it splits the string st every character
+// Next the `reverse` method was used tp reversethe order of the element in the array
+// Now the `join` method was used to convert the reverse the order of the element in the array
+// Next I used the `join` method to convert the reverse array back into a string. 
+// The empty string passed as an argument to `join` is a seperator that specifices how to join the elements of the array effectively concatenating them together.
+// The reversed string is assigned to the variable `reversedCohort`
+// Finally the code outputs the value of `reveresedCohort` to the console using the `console.log` function.
+
 
 const currentCohort = "Alpha 2023"
 
@@ -97,6 +118,12 @@ console.log(reversedCohort);
 // --------------------4) Create the code that will return the last index of the given value from the array using the test variables provided below.
 
 // Pseudo code:
+// I used the `lastIndexOf` method of the `myNumbers` array to find the last index of the given values `givenValue1` and `givenValue2`.
+// The `lastIndexOf` method returns the index of the last occurrence of a specifiied value in an array.
+// The index of the last occurrence of `givenValue1` is assigned to the variable `lastIndex1`, and the index of the last occurrence of `givenValue2` is assigned to the variable `lastIndex2`.
+// The final outputs the values of `lastIndex1` and lastIndex2` to the console using the `console.log`
+
+
 
 const myNumbers = [13, 34, 42, 5, 5, 10, 27, 42, 10]
 const givenValue1 = 42
@@ -114,6 +141,13 @@ console.log(lastIndex2);
 // --------------------5) Create the code that will sort all the numbers in an array from largest to smallest. Use the test variables provided below.
 
 // Pseudo code:
+// First I started with the `sort` method of the sanDiegoSummerTenperatures` and sanDiegoWinterTemperatures` arrays to sort the elements in decending order.
+// The `sort` takes a compare function as an argument, which is used to determine the order of the elements.
+// The compare function `(a,b) => - a` compares two values `a` and `b` and returns a positive number if `b`should come before `a`, a negative number if `a` should come before`b`, or zero if the order of `a` and `b` does not matter.
+// Subtract `a` from `b`, which results in a positive number if `b` is greater than `a`, and a negative number if `a` is greater than `b`, effecticely sorting the array in descending order.  
+// The sorted arrays are assigned back to the original variables `sanDiegoSummerTemperatures` and `sanDiegoWinterTemperatures`.
+// The Final outputs the sorted arrays to the console using the `console.log`.
+
 
 const sanDiegoSummerTemperatures = [79, 80, 72, 73, 82, 77, 76]
 // Expected output: [82, 80, 79, 77, 76, 73, 72]
